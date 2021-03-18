@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
     },
     table: {
         height: "auto",
-        display: 'block'
+        display: 'block',
+        minWidth: 650,
     }
 }));
 
@@ -45,10 +46,10 @@ export default function AllCountries() {
     return (
         <div className={classes.root}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{padding:0}}>
 
           <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table">
+          <Table className={classes.table} size="small" aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>Country Name</TableCell>
@@ -86,12 +87,7 @@ export default function AllCountries() {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
-
-
-
-
-            
+        </TableContainer>      
           </Grid>
           </Grid>
           
